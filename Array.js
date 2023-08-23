@@ -17,7 +17,7 @@ const reverseArray = () => {
 
 //2. sort an array from lowest to highest -> bubble sort
 
-// arr.sort()
+// arr.sort((a,b) => a-b)
 const sort = () => {
     const arr = [3, 1, 50, 6, 2, 10];
     for (let i = 0; i < arr.length; i++) {
