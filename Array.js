@@ -40,9 +40,7 @@ const result = sampleArray.filter(e => e > 0)
 // 4. Sum of numbers in array
 const sumOfArray = () => {
     const sampleArray = [1, 4, 2, 6, 7, -3, 0, -10.2, 6];
-    const sum1 = sampleArray.reduce((prev, curr) => {
-        return prev + curr
-    }, 0);
+    const sum1 = sampleArray.reduce((prev, curr) => prev + curr,0);
     console.log(sum1);
 }
 
@@ -68,6 +66,38 @@ const getPurchaseTotal = () => {
     console.log(totalAmt)
 }
 
+// 7. Sort array of array 
+
+const sortArr = () =>{
+    const students = [
+        { name: "Alex", grade: 6 },
+        { name: "Eagle", grade: 3 },
+        { name: "Sam", grade: 9 },
+        { name: "Devlin", grade: 10 },
+      ];
+    // sort the object according to grade  
+      const result = students.sort((a,b) => a.grade - b.grade)
+      console.log(result)
+    // sort the object according to name  
+      const compareFunc = (a,b) =>{
+          if(a.name<b.name)
+            return -1
+          else if(a.name>b.name)
+            return +1
+          else if (a.name == b.name)
+           return 0
+      }
+      const result2 = students.sort(compareFunc)
+      console.log(result2)
+      // second approach for sorting according to name
+      const result4 = students.sort((a,b) => a.name.localeCompare(b.name))
+      console.log(result4)
+      // sort the array of alphabets
+      const arr = ["a","c","b","l","f","d"];
+      const result3 = arr.sort((a,b) => a.localeCompare(b));
+      console.log(result3)
+}
+
 
 // CALLING METHODS
 reverseArray()
@@ -77,6 +107,7 @@ sumOfArray()
 printBoom([1, 5, 3, 7, 4])
 printBoom([2, 4, 6])
 getPurchaseTotal()
+sortArr()
 
 //OUTPUT
 // [ 5, 4, 3, 2, 1 ]
@@ -86,3 +117,25 @@ getPurchaseTotal()
 // BOOM
 // The array doesn't have 7 in it
 // 1950
+// [
+//     { name: 'Eagle', grade: 3 },
+//     { name: 'Alex', grade: 6 },
+//     { name: 'Sam', grade: 9 },
+//     { name: 'Devlin', grade: 10 }
+//   ]
+
+// [
+//     { name: 'Alex', grade: 6 },
+//     { name: 'Devlin', grade: 10 },
+//     { name: 'Eagle', grade: 3 },
+//     { name: 'Sam', grade: 9 }
+//   ]
+
+//   [
+//     { name: 'Alex', grade: 6 },
+//     { name: 'Devlin', grade: 10 },
+//     { name: 'Eagle', grade: 3 },
+//     { name: 'Sam', grade: 9 }
+//   ]
+//   [ 'a', 'b', 'c', 'd', 'f', 'l' ]
+  
