@@ -7,7 +7,6 @@ const checkPalindrome = (value) => {
 }
 
 const checkPalindromeIterator = (value) => {
-    const val = value.split('')
     for (let i = 0; i < value.length; i++) {
         let length = value.length - 1;
 
