@@ -1,0 +1,17 @@
+
+.root{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid grey;
+    padding: 20px;
+    max-width: 200px;
+}
+
+.pie {
+    width:200px;
+    height:200px;
+    background-image: conic-gradient(blue var(--percent),lightblue 0);
+    clip-path: circle(40%);
+}
