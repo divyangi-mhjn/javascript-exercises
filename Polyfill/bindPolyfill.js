@@ -1,7 +1,9 @@
-Function.prototype.myBind = function(value,...args){
- let func = this;
+Function.prototype.myBind = function(valueObj,...args){
+    valueObj.func = this;
+    // let funcName = this
  return function(...callArgs){
-    func.apply(value,[...args,...callArgs])
+    valueObj.func(...args,...callArgs)   //without apply method
+    // funcName.apply(valueObj,[...args,...callArgs])
  }
 }
 
