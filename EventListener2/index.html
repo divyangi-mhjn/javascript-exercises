@@ -1,0 +1,89 @@
+<htm>
+
+    <head>
+        <style>
+            .ordered>li:nth-child(odd) {
+                color: blue;
+            }
+
+            li:nth-child(even) {
+                color: red;
+            }
+
+            .container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+            }
+
+            .container>div {
+                height: 100px;
+                width: 100px;
+                border: 1px solid black;
+            }
+
+            .container #div2{
+                background-color: blue;
+            }
+
+            .container div:nth-last-child(odd){
+                background-color:yellow;
+            }
+        </style>
+         <script defer src="./index.js"></script>
+    </head>
+
+    <body>
+        <div>
+            <div class="container1">
+            <ol class="ordered">
+                <li>One</li>
+                <li>Two</li>
+                <li>Three</li>
+                <li>Four</li>
+                <li>Five</li>
+            </ol>
+        </div>
+            <div class="container" id="container">
+                <div id="div1"></div>
+                <div id="div2"></div>
+                <div id="div3"></div>
+                <div id="div4"></div>
+                <div id="div5"></div>
+                <div id="div6"></div>
+                <div id="div7"></div>
+            </div>
+            <h5>Enter which div should be coloured</h5>
+            <input type="number" id="input1" />
+            <span id="error"></span>
+            <span>You can only select up to two options.</span>
+            <div class="check">
+                <label for="html">
+                    <input type="checkbox" value="html" id="html" />
+                    HTML
+                </label>
+                <label for="javascript">
+                    <input type="checkbox" value="javascript" id="javascript" />
+                    JavaScript
+                </label>
+                <label for="react">
+                    <input type="checkbox" value="react" id="react" />
+                    React
+                </label>
+            </div>
+            <div id="radioDiv">
+            <input type="radio" name="test" value="value1"> Value 1
+            <input type="radio" name="test" value="value2"> Value 2
+            <input type="radio" name="test" value="value3"> Value 3
+        </div>
+        <input type="text" id="email"/>
+        <button onclick="handleClick()">Validate</button>
+        <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Google_Images_2015_logo.svg/1200px-Google_Images_2015_logo.svg.png" load="lazy" /> -->
+       <span id="counter"></span>
+        <button id="increase">+</button>    
+    <button id="decrease">-</button>
+    </div>
+       
+    </body>
+    
+</htm>
